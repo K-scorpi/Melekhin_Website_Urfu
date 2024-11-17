@@ -70,5 +70,35 @@ document.addEventListener("DOMContentLoaded", function() {
         form.reset();
       }
     });
-  });
-  
+
+    // Пример изменения стилей с помощью JavaScript: изменение цвета фона блока услуг при наведении
+    const servicesBlocks = document.querySelectorAll('.service-block');
+    servicesBlocks.forEach(block => {
+        block.addEventListener('mouseenter', () => {
+            block.style.backgroundColor = '#f0f8ff'; // Изменяем цвет фона при наведении
+        });
+
+        block.addEventListener('mouseleave', () => {
+            block.style.backgroundColor = ''; // Восстанавливаем оригинальный цвет фона
+        });
+    });
+
+    // Пример изменения стилей: скрытие блока с результатами формы при клике на кнопку
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', () => {
+        formOutput.style.display = 'none'; // Скрываем блок с данными
+    });
+
+
+
+    // Добавляем обработчик клика по кнопке
+    btn.addEventListener('click', function() {
+        // Включаем анимацию вращения на 3 секунды
+        btn.classList.add('loading');
+
+        // Через 3 секунды удаляем класс и восстанавливаем кнопку
+        setTimeout(() => {
+            btn.classList.remove('loading');
+        }, 3000); // 3000 миллисекунд = 3 секунды
+    });
+});
