@@ -55,25 +55,111 @@
         </div>
       </section>
 
-      <!-- Форма обратного звонка -->
+      <!-- Форма заказа продукта или услуги -->
+      <section class="order-form">
+        <h2>Форма заказа продукта или услуги</h2>
+        <form id="order-form" action="#" method="post">
+          <input 
+            id="first-name" 
+            type="text" 
+            placeholder="Ваше имя" 
+            required />
+          
+          <input 
+            id="last-name" 
+            type="text" 
+            placeholder="Ваша фамилия" 
+            required />
+          
+          <input 
+            id="email" 
+            type="email" 
+            placeholder="Электронная почта" 
+            required />
+          
+          <select id="product-service" required>
+            <option value="" disabled selected>Выберите продукт или услугу</option>
+            <option value="product1">Продукт 1</option>
+            <option value="product2">Продукт 2</option>
+            <option value="service1">Услуга 1</option>
+            <option value="service2">Услуга 2</option>
+          </select>
+          
+          <input 
+            id="order-date" 
+            type="date" 
+            required />
+          
+          <textarea 
+            id="message" 
+            placeholder="Ваше сообщение или комментарии" 
+            rows="4" 
+            required></textarea>
+          
+          <button type="submit">Отправить заказ</button>
+        </form>
+        <div id="form-errors"></div>
+      </section>
+
+      <!-- Блок для отображения данных формы -->
+      <div id="form-output" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; display: none;">
+        <h3>Данные заказа:</h3>
+        <p><strong>Имя:</strong> <span id="output-first-name"></span></p>
+        <p><strong>Фамилия:</strong> <span id="output-last-name"></span></p>
+        <p><strong>Email:</strong> <span id="output-email"></span></p>
+        <p><strong>Продукт/Услуга:</strong> <span id="output-product-service"></span></p>
+        <p><strong>Дата заказа:</strong> <span id="output-order-date"></span></p>
+        <p><strong>Сообщение:</strong> <span id="output-message"></span></p>
+      </div>
+
+      <<!-- Форма обратного звонка -->
       <section class="callback-form">
         <h2>Форма заказа обратного звонка</h2>
         <form action="#" method="post">
-          <input type="text" placeholder="Имя" required />
-          <input type="email" placeholder="Электронная почта" required />
-          <input type="tel" placeholder="Телефон" required />
-          <textarea placeholder="Какая тема Вас интересует?" rows="4"></textarea>
+          <input 
+            type="text" 
+            placeholder="Имя" 
+            required 
+            minlength="2" 
+            maxlength="50" 
+            pattern="[A-Za-zА-Яа-яЁё ]+" 
+            title="Введите имя, содержащее только буквы и пробелы" />
+            
+          <input 
+            type="email" 
+            placeholder="Электронная почта" 
+            required 
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+            title="Введите корректный адрес электронной почты" />
+            
+          <input 
+            type="tel" 
+            placeholder="Телефон" 
+            required 
+            pattern="^\+?[0-9]{10,15}$" 
+            title="Введите номер телефона, начиная с + и состоящий из 10-15 цифр" />
+            
+          <textarea 
+            placeholder="Какая тема Вас интересует?" 
+            rows="4" 
+            required 
+            minlength="10" 
+            maxlength="500" 
+            title="Тема должна содержать хотя бы 10 символов"></textarea>
+          
           <button type="submit">Отправить вопрос!</button>
         </form>
       </section>
 
       <!-- Футер -->
       <footer>
-
         <div class="background3"></div>
         <p>© Все на этом сайте защищено</p>
         <div class="background4"></div>
       </footer>
     </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>

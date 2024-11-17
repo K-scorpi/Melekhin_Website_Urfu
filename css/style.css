@@ -124,7 +124,7 @@
   
   /* ---------------- Форма обратного звонка ---------------- */
   
-  .callback-form {
+/*  .callback-form {
     background-color: #ebf9fc;
     padding: 50px 5%;
     text-align: center;
@@ -167,6 +167,83 @@
   .callback-form button:hover {
     background-color: #ffdd33;
   }
+  */
+  .callback-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .callback-form h2 {
+    text-align: center;
+  }
+  
+  .callback-form input, .callback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .callback-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .callback-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* ---------------- Order ---------------- */
+  .order-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .order-form h2 {
+    text-align: center;
+  }
+  
+  .order-form input, 
+  .order-form select, 
+  .order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .order-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .order-form button:hover {
+    background-color: #45a049;
+  }
+  
+  #error-message {
+    color: red;
+    font-size: 14px;
+  }
+  
   
   /* ---------------- Футер ---------------- */
   
