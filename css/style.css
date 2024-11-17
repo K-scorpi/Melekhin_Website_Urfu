@@ -1,0 +1,203 @@
+/* Сброс отступов и границ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Универсальная обертка-контейнер */
+  .container {
+    width: 100%;         /* Контейнер растягивается на всю ширину */
+    max-width: 1920px;    /* Ограничение максимальной ширины */
+    margin: 0 auto;       /* Центрирование содержимого */
+    padding: 20px;        /* Внутренние отступы для эстетики */
+  }
+  
+  /* ---------------- Hero (Первый блок) ---------------- */
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    /* Плавный градиент с несколькими цветами */
+    background: linear-gradient(180deg, rgba(155, 183, 221, 0.9), rgba(36, 118, 232, 0.8));
+    min-height: 100vh; /* Занимает весь экран по высоте */
+  }
+  
+  .hero__content {
+    flex: 1;
+    margin-right: 30px;
+    color: #fff;
+  }
+  
+  .logo-and-text img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .logo-and-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .logo-and-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .logo-and-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .logo-and-text button {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  .logo-and-text button:hover {
+    background-color: #ffdd33;
+  }
+  
+  .hero__image img {
+    width: 80%;  /* Изображение занимает в % ширины экрана */
+    max-width: 900px;
+    height: auto;
+  }
+  
+  /* ---------------- Блок услуг ---------------- */
+  
+  .services {
+    background-color: #ffffff;
+    padding: 50px 5%;  /* Используем проценты для отступов */
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .services__blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .service-block {
+    flex: 1 1 30%;
+    min-width: 280px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    /*box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);*/
+  }
+  
+  .service-block img {
+    max-width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .service-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-block p {
+    color: #666;
+  }
+  
+  /* ---------------- Форма обратного звонка ---------------- */
+  
+  .callback-form {
+    background-color: #ebf9fc;
+    padding: 50px 5%;
+    text-align: center;
+  }
+  
+  .callback-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .callback-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .callback-form input,
+  .callback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .callback-form button {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .callback-form button:hover {
+    background-color: #ffdd33;
+  }
+  
+  /* ---------------- Футер ---------------- */
+  
+  footer {
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  .background3,
+  .background4 {
+    height: 100px;
+    width: 100%;
+  }
+  
+  .background3 {
+    background: linear-gradient(180deg, #19498d, #5b98ec);
+  }
+  
+  .background4 {
+    background: linear-gradient(180deg, #4b8be6, #95baee);
+  }
+  
+  footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
